@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title><%= pageTitle %></title>
+      <link href="/css/stylus.css" rel="stylesheet" type="text/css" />
+      <link href="/css/common_master.css" rel="stylesheet" type="text/css" />
+      <link href="/css/font.css" rel="stylesheet" type="text/css" />
+      <!--<meta http-equiv="refresh" content="01"/>-->
+   </head>
+   <body>
+      <div class="header-fix">
+         <div class="header-wrapper">
+            <div class="navigation left">
+               <img src="/img/menu.svg" alt="" width="18px"/>
+            </div>
+            <div class="logo left">
+               <img src="/img/logo.svg" alt="" width="55px"/>
+            </div>
+            <div class="search-wrap left">
+               <div class="sc-icn left"><img src="/img/lens.svg" alt="" width="14px"/></div>
+               <div class="left srch-input"><input type="text" class="search-box" placeholder="Search here..."></div>
+               <div class="right crs-icn"><a href="#"><img src="/img/clear.svg" alt="" width="14px"/></a></div>
+               <div class="clr"></div>
+            </div>
+            <div class="profile-wrap right"><img src="/img/settings.svg" alt="" width="18px"/></div>
+            <div class="helpwrap right"><img src="/img/help.svg" alt="" width="18px"/></div>
+            <div class="clr"></div>
+         </div>
+         <div class="breadcrumb">
+            <ul>
+               <li><a href="#">Dashboard</a></li>
+               <li class="brcump-sep"><img src="/img/next.svg" alt="" width="12px"/></li>
+               <li><a href="#">Users</a></li>
+               <li class="brcump-sep"><img src="/img/next.svg" alt="" width="12px"/></li>
+               <li>Create user</li>
+               <div class="clr"></div>
+            </ul>
+         </div>
+      </div>
+      <div class="wrapper">
+         <div class="col-wrapper">
+            <div class="full-column">
+               <div class="column-head">
+                  <div class="col-pagename left">Doctor's List</div>
+                  <div class="master-creation right">
+                     <a href="/doctor">
+                        <span class="crticn"><img src="/img/plus.svg" alt="" width="16px"/></span><span class="crtxt">Create New Doctor</span>
+                        <div class="clr"></div>
+                     </a>
+                  </div>
+                  <div class="right">
+                     <div class="left rmarg"><input type="date" class="fltr-datebox" placeholder="from Date*" value=""></div>
+                     <div class="left rmarg"><input type="date" class="fltr-datebox" placeholder="upto Date*" value=""></div>
+                     <div class="left fltr-btn"><a href="#">GO</a></div>
+                     <div class="left rest-btn"><a href="#"><img src="/img/clear.svg" alt="" width="12px"></a></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="clr"></div>
+               </div>
+               <div class="table-wrap">
+                  <div class="table-head liquidcells">
+                        <div class="left tbl-cell size-m text-wrapping">Full Name</div>
+                        <div class="left tbl-cell size-s text-wrapping">Expertise</div>
+                        <div class="left tbl-cell size-m text-wrapping">Degree</div>
+                        <div class="left tbl-cell size-s text-wrapping">Mobile</div>
+                        <div class="left tbl-cell size-xs text-wrapping">Date Registered</div>
+                        <div class="left tbl-cell size-xs text-wrapping">Fee</div>
+                        <div class="left tbl-cell size-xs text-wrapping">Status</div>
+                        <div class="clr"></div>
+                  </div>
+                  <div class="table-body">
+                  <% result.forEach(function(result){ 
+                     var date = new Date(result.DateCreated*1000)
+                     %>
+                     <div class="table-row liquidcells">
+                        <div class="left tbl-cell size-m text-wrapping"><%= result.Name%></div>
+                        <div class="left tbl-cell size-s text-wrapping"><%= result.Speciality%></div>
+                        <div class="left tbl-cell size-m text-wrapping"><%= result.Degree %></div>
+                        <div class="left tbl-cell size-s text-wrapping"><%= result.Mobile %></div>
+                        <div class="left tbl-cell size-xl text-wrapping"><%= date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear() %></div>
+                        <div class="left tbl-cell size-xs text-wrapping"><%= result.Free %></div>
+                        <div class="left tbl-cell size-xs text-wrapping <%= result.Active == '1' ? 'grntxt' : 'redtxt'; %> "><%= result.Active == '1' ? 'Active' : 'Deactive'; %></div>
+                        
+                     
+                     <div class="right tbl-actn posrel">
+                        <a href="#">Action</a>
+                        <span class="drop-actns posabsolut">
+                        <a href=# class="text-wrapping">Item one</a>
+                        </span>
+                     </div>
+                     <div class="clr"></div>
+                     </div>
+                  <% }); %>
+                  </div>
+               </div>
+               <div class="pagination">
+                  <div class="left rsltpp">
+                     <div class="rsl-hding left">Result Per Page</div>
+                     <div class="rsl-counter left posrel">
+                        <a href="#">10</a>
+                        <!--<ul class="posabsolut">
+                           <li><a href="#">All</a></li>
+                           <li><a href="#">50</a></li>
+                           <li><a href="#">40</a></li>
+                           <li><a href="#">30</a></li>
+                           <li><a href="#">20</a></li>
+                           </ul>-->
+                     </div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="right pgntn">
+                     <a href="#"><img src="img/first.svg" alt="" width="14px"/></a>
+                     <a href="#"><img src="img/previous.svg" alt="" width="14px"/></a>
+                     <span href="" class="crntpg">Page 1 of 32</span>
+                     <a href="#"><img src="img/next2.svg" alt="" width="14px"/></a>
+                     <a href="#"><img src="img/last.svg" alt="" width="14px"/></a>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="clr"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer-wrapper">Copyright © 2020- Pulse - a product of Innobles Smart Technologies (P) Ltd. </div>
+      </div>
+   </body>
+</html>

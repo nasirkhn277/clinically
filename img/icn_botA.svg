@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="164" height="133.447" viewBox="0 0 164 133.447">
+  <g id="icn_botA" transform="translate(7 7)">
+    <path id="Path_7" data-name="Path 7" d="M47,117.5H24.5v-15m22.5,15v-30H77m-30,30H77m30,0h22.5v-15m-22.5,15v-30H77m30,30H77m0-30v30M77,35H54.5a30,30,0,0,0-30,30h0M77,35H99.5a30,30,0,0,1,30,30h0M77,35V5m52.5,60H137a15,15,0,0,1,15,15v7.5a15,15,0,0,1-15,15h-7.5m0-37.5v37.5M24.5,76.25v15M24.5,65H17A15,15,0,0,0,2,80v7.5a15,15,0,0,0,15,15h7.5m0-37.5v37.5" transform="translate(-2 1.947)" fill="none" stroke="#00ffba" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"/>
+    <path id="Path_8" data-name="Path 8" d="M9,13h.007" transform="translate(43.5 53.947)" fill="none" stroke="#00ffba" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"/>
+    <path id="Path_9" data-name="Path 9" d="M15,13h.007" transform="translate(82.5 53.947)" fill="none" stroke="#00ffba" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"/>
+    <circle id="Ellipse_7" data-name="Ellipse 7" cx="7.196" cy="7.196" r="7.196" transform="translate(67.638)" fill="none" stroke="#00ffba" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"/>
+  </g>
+</svg>

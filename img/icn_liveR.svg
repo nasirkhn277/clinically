@@ -1,0 +1,8 @@
+<svg id="icn_liveR" xmlns="http://www.w3.org/2000/svg" width="150" height="149.993" viewBox="0 0 150 149.993">
+  <path id="Path_5" data-name="Path 5" d="M130.123,48.721h7.241A13.636,13.636,0,0,1,151,62.357V89.63a13.636,13.636,0,0,1-13.636,13.636h-7.241A54.552,54.552,0,0,1,76,150.994V137.357a40.909,40.909,0,0,0,40.909-40.909V55.539a40.909,40.909,0,1,0-81.818,0v47.727H14.636A13.636,13.636,0,0,1,1,89.63V62.357A13.636,13.636,0,0,1,14.636,48.721h7.241a54.552,54.552,0,0,1,108.245,0ZM14.636,62.357V89.63h6.818V62.357Zm115.909,0V89.63h6.818V62.357ZM47.091,101.8l7.227-11.564a40.948,40.948,0,0,0,43.364,0l7.227,11.564a54.584,54.584,0,0,1-57.818,0Z" transform="translate(-1 -1.001)" fill="#fff"/>
+  <circle id="Ellipse_3" data-name="Ellipse 3" cx="6.975" cy="6.975" r="6.975" transform="translate(93.409 87.577)" fill="#fff"/>
+  <circle id="Ellipse_4" data-name="Ellipse 4" cx="6.975" cy="6.975" r="6.975" transform="translate(41.967 87.577)" fill="#fff"/>
+  <ellipse id="Ellipse_5" data-name="Ellipse 5" cx="6.975" cy="6.539" rx="6.975" ry="6.539" transform="translate(54.173 44.853)" fill="#fff"/>
+  <ellipse id="Ellipse_6" data-name="Ellipse 6" cx="6.975" cy="6.539" rx="6.975" ry="6.539" transform="translate(83.818 44.853)" fill="#fff"/>
+  <path id="Path_6" data-name="Path 6" d="M13.888,10.491A6.944,6.944,0,1,1,0,10.491C0,6.656,13.888,6.656,13.888,10.491Z" transform="translate(67.962 64.408)" fill="#fff"/>
+</svg>

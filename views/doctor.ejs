@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title><%= pageTitle %></title>
+	<link href="/css/stylus.css" rel="stylesheet" type="text/css" />
+	<link href="/css/common_master.css" rel="stylesheet" type="text/css" />
+	<link href="/css/font.css" rel="stylesheet" type="text/css" />
+	<!--<meta http-equiv="refresh" content="01"/>-->
+</head>
+
+<body>
+	<div class="header-fix">
+	<div class="header-wrapper">
+		<div class="navigation left">
+	    <img src="img/menu.svg" alt="" width="18px"/>
+		</div>
+		<div class="logo left">
+			<img src="img/logo.svg" alt="" width="55px"/>
+		</div>
+		<div class="search-wrap left">
+			<div class="sc-icn left"><img src="img/lens.svg" alt="" width="14px"/></div>
+			<div class="left srch-input"><input type="text" class="search-box" placeholder="Search here..."></div>
+			<div class="right crs-icn"><a href="#"><img src="img/clear.svg" alt="" width="14px"/></a></div>
+			<div class="clr"></div>
+		</div>
+		<div class="profile-wrap right"><img src="img/settings.svg" alt="" width="18px"/></div>
+		
+		<div class="helpwrap right"><img src="img/help.svg" alt="" width="18px"/></div>
+		
+		<div class="clr"></div>
+	</div>
+		
+	</div>
+	
+<div class="wrapper">
+	<div class="col-wrapper">
+		<div class="full-column">
+			<div class="column-head">
+				<div class="col-pagename left">Doctor Registration</div>
+				<div class="clr"></div>
+			</div>
+			<div class="content-page">
+				<div class="content-block">
+					<div class="content-title">Welcome to Clinician</div>
+				</div>
+				<form method="post" action="/doctor">
+					<div class="form-field-wrap posrel">
+						<div class="posabsolut frm-lbl-actv">Doctor Name*</div>
+						<div class="form-type"><input type="text" name="doctor_name" class="frm-txtbox" placeholder="Doctor Name*" value="Axia Health Assist"></div>
+					</div>
+					<div class="form-field-wrap posrel">
+						<div class="posabsolut frm-lbl-actv">User Name*</div>
+						<div class="form-type"><input type="text" name="username" class="frm-txtbox" placeholder="User Name*" value="dr1234"></div>
+					</div>
+					<div class="form-field-wrap posrel">
+						<div class="posabsolut frm-lbl-actv">Password*</div>
+						<div class="form-type"><input type="password" name="password" class="frm-txtbox" placeholder="Password*" value="1234"></div>
+					</div>
+					<div class="form-field-wrap posrel">
+						<div class="posabsolut frm-lbl-actv">Mobile*</div>
+						<div class="form-type"><input type="text" name="mobile" class="frm-txtbox" placeholder="Mobile*" value="9721214950"></div>
+					</div>
+					<div class="form-field-wrap posrel">
+						<div class="posabsolut frm-lbl-actv">Specility*</div>
+						<div class="form-type"><input type="text" name="specility" class="frm-txtbox" placeholder="Specility*" value="Cardiologist"></div>
+					</div>
+                    <div class="form-field-wrap posrel">
+						<div class="posabsolut frm-lbl-actv">Degree*</div>
+						<div class="form-type"><input type="text" name="degree" class="frm-txtbox" placeholder="Degree*" value="MBBS"></div>
+					</div>
+                    <div class="form-field-wrap posrel">
+						<div class="posabsolut frm-lbl-actv">Fee*</div>
+						<div class="form-type"><input type="text" name="fee" class="frm-txtbox" placeholder="Fee*" value="500"></div>
+					</div>
+					<div class="form-field-wrap posrel">
+						<div class="posabsolut frm-lbl-actv">Address*</div>
+						<div class="form-type"><textarea class="frm-txarea pageform" name="address" placeholder="Address*">SCO-19 First Floor, HUDA Market, Huda, Sector 23, Gurugram, Haryana 122017</textarea></div>
+					</div>
+					<div class="actionbuttons">
+						<input type="submit" class="primary alc" value="Register">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="footer-wrapper">Copyright © 2023- Clinician - a product of Innobles Smart Technologies (P) Ltd. </div>
+</div>
+</body>
+</html>

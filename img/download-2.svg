@@ -1,0 +1,6 @@
+<svg id="download" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+  <g id="Group_6" data-name="Group 6" transform="translate(0 12)">
+    <path id="Path_20" data-name="Path 20" d="M15.75,22H2.25A2.25,2.25,0,0,1,0,19.75v-3a.75.75,0,1,1,1.5,0v3a.75.75,0,0,0,.75.75h13.5a.75.75,0,0,0,.75-.75v-3a.75.75,0,0,1,1.5,0v3A2.25,2.25,0,0,1,15.75,22Z" transform="translate(0 -16)" fill="#3cc3a3"/>
+  </g>
+  <path id="Path_21" data-name="Path 21" d="M14.28,9.53l-3,3a.75.75,0,0,1-1.06,0l-3-3a.75.75,0,0,1,.53-1.28H10V.75a.75.75,0,1,1,1.5,0v7.5h2.25a.75.75,0,0,1,.53,1.28Z" transform="translate(-1.75)" fill="#3cc3a3"/>
+</svg>
