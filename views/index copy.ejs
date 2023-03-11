@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="pre-login">
+<head>
+<meta charset="UTF-8">
+<title>Clinician</title>
+	<link href="/css/stylus.css" rel="stylesheet" type="text/css" />
+	<link href="/css/common_master.css" rel="stylesheet" type="text/css" />
+	<link href="/css/font.css" rel="stylesheet" type="text/css" />
+	<!--<meta http-equiv="refresh" content="01"/>-->
+</head>
+
+<body class="preloginpges">
+	
+	<div class="login-block">
+	
+		
+		<div class="logbox">
+			<div class="login-wrapper">
+			<div class="welcom-log">
+				Login to Your Account
+			</div>
+			<form method="post" action="/login">
+			<div class="form-field-wrap posrel">
+				<div class="form-type"><input type="text" name="username" class="frm-txtbox login-inputs" placeholder="Username" value="nasir"></div>
+			</div>
+				<div class="form-field-wrap posrel">
+					<div class="form-type"><input type="password" name="password" class="frm-txtbox login-inputs" placeholder="Password" value="password"></div>
+					<div class="frm-er-msg hide">username & passoword did not matched</div>
+				</div>
+				<div class="right bmarg tmarg"><a href="#">Unable to login?</a></div>
+				<div class="left bmarg tmarg"><a href="/signup">Create Account</a></div>
+				<div class="clr"></div>
+				<div class="actionbuttons">
+					<input type="submit" class="primary alc" value="LOGIN">
+				</div>
+			</form>
+			<div class="clr"></div>
+				<div class="cpy-msg">© 2023 - Clinician App</div>
+				</div>
+			<div class="footer-wrapper">Copyright © 2021<br>Powered by Clinician (P) Ltd. </div>
+		</div>
+		<div class="clr"></div>
+	</div>
+</body>
+</html>

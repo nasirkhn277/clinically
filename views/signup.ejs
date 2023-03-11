@@ -1,82 +1,50 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title><%= pageTile %></title>
-	<link href="/css/stylus.css" rel="stylesheet" type="text/css" />
-	<link href="/css/common_master.css" rel="stylesheet" type="text/css" />
-	<link href="/css/font.css" rel="stylesheet" type="text/css" />
-	<!--<meta http-equiv="refresh" content="01"/>-->
-</head>
-
-<body>
-	<div class="header-fix">
-	<div class="header-wrapper">
-		<div class="navigation left">
-	    <img src="img/menu.svg" alt="" width="18px"/>
-		</div>
-		<div class="logo left">
-			<img src="img/logo.svg" alt="" width="55px"/>
-		</div>
-		<div class="search-wrap left">
-			<div class="sc-icn left"><img src="img/lens.svg" alt="" width="14px"/></div>
-			<div class="left srch-input"><input type="text" class="search-box" placeholder="Search here..."></div>
-			<div class="right crs-icn"><a href="#"><img src="img/clear.svg" alt="" width="14px"/></a></div>
-			<div class="clr"></div>
-		</div>
-		<div class="profile-wrap right"><img src="img/settings.svg" alt="" width="18px"/></div>
-		
-		<div class="helpwrap right"><img src="img/help.svg" alt="" width="18px"/></div>
-		
-		<div class="clr"></div>
-	</div>
-		
-	</div>
-	
-<div class="wrapper">
-	<div class="col-wrapper">
-		<div class="full-column">
-			<div class="column-head">
-				<div class="col-pagename left">Clinic Registration</div>
-				<div class="clr"></div>
-			</div>
-			<div class="content-page">
-				<div class="content-block">
-					<div class="content-title">Welcome to Clinician</div>
-				</div>
-				<form method="post" action="/signup">
-					<div class="form-field-wrap posrel">
-						<div class="posabsolut frm-lbl-actv">Clinic Name*</div>
-						<div class="form-type"><input type="text" name="clinic_name" class="frm-txtbox" placeholder="Clinic Name*" value="Axia Health Assist"></div>
-					</div>
-					<div class="form-field-wrap posrel">
-						<div class="posabsolut frm-lbl-actv">User Name*</div>
-						<div class="form-type"><input type="text" name="username" class="frm-txtbox" placeholder="Clinic Name*" value=""></div>
-					</div>
-					<div class="form-field-wrap posrel">
-						<div class="posabsolut frm-lbl-actv">Password*</div>
-						<div class="form-type"><input type="password" name="password" class="frm-txtbox" placeholder="Clinic Name*" value=""></div>
-					</div>
-					<div class="form-field-wrap posrel">
-						<div class="posabsolut frm-lbl-actv">Mobile*</div>
-						<div class="form-type"><input type="text" name="clinic_mobile" class="frm-txtbox" placeholder="Mobile*" value="9721214950"></div>
-					</div>
-					<div class="form-field-wrap posrel">
-						<div class="posabsolut frm-lbl-actv">Zip Code*</div>
-						<div class="form-type"><input type="text" name="zip_code" class="frm-txtbox" placeholder="Zip Code*" value="122017"></div>
-					</div>
-					<div class="form-field-wrap posrel">
-						<div class="posabsolut frm-lbl-actv">Address*</div>
-						<div class="form-type"><textarea class="frm-txarea pageform" name="address" placeholder="Address*">SCO-19 First Floor, HUDA Market, Huda, Sector 23, Gurugram, Haryana 122017</textarea></div>
-					</div>
-					<div class="actionbuttons">
-						<input type="submit" class="primary alc" value="Sign Up">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<div class="footer-wrapper">Copyright © 2023- Clinician - a product of Innobles Smart Technologies (P) Ltd. </div>
-</div>
-</body>
+<%- include('head.ejs') %>
+   <body>
+      <div class="login-block">
+         <div class="left heroimg">
+            <img src="/img/heroimg.jpg" width="100%" height="" alt=""/>
+            <p>Is your smart clinic powered by AI?</p>
+         </div>
+         <div class="login-wrapper right boxsizing parent_wrapper">
+			<form id="frm">
+            <div class="welcom-log">
+               Setup your account. Go Clinically
+            </div>
+            <div class="form-field-wrap posrel parent_div">
+               <div class="form-type"><input type="text" class="frm-txtbox login-inputs boxsizing alphabet fldrequired" maxlength="50" placeholder="Your Name" value="" autocomplete="off"></div>
+			   <div class="frm-er-msg"></div>
+            </div>
+            <div class="form-field-wrap posrel parent_div">
+               <div class="form-type"><input type="text" id="email" class="frm-txtbox login-inputs boxsizing fldrequired validate_email" placeholder="Email" value=""  autocomplete="off"></div>
+			   <div class="frm-er-msg"></div>
+            </div>
+            <div class="form-field-wrap posrel parent_div">
+               <div class="form-type"><input type="text" id="mobile" name="mobile" class="frm-txtbox login-inputs boxsizing integer fldrequired validate_mobile" placeholder="Mobile" value=""  autocomplete="off"></div>
+			   <div class="frm-er-msg"></div>
+            </div>
+            <div class="form-field-wrap posrel parent_div">
+               <div class="form-type"><input type="password" id="pass" class="frm-txtbox login-inputs boxsizing fldrequired" placeholder="Create Password" value="" autocomplete="off"></div>
+			   <div class="frm-er-msg"></div>
+            </div>
+            <div class="form-field-wrap posrel parent_div">
+               <div class="form-type"><input type="password" id="cpass" class="frm-txtbox login-inputs boxsizing fldrequired" placeholder="Confirm Password" onchange="validatePassword()" value=""  autocomplete="off"></div>
+               <div class="frm-er-msg"></div>
+            </div>
+            <div class="clr"></div>
+            <div class="actionbuttons tmarg">
+               <a style="cursor: pointer;" id="save" class="primary loginbtn boxsizing save">Continue</a>
+               <div class="clr"></div>
+            </div>
+            <a class="signupbtn" href="/login">Already have an Account? LOGIN</a>
+            <div class="clr"></div>
+            <%- include('./includes/footer.ejs') %>
+			</form>
+         </div>
+         <div class="clr"></div>
+      </div>
+   </body>
 </html>
+<script src="/scripts/common.js"></script>
+<script src="/scripts/common.function.js"></script>
+<script src="/scripts/main.js"></script>
+<script src="/scripts/admin.js"></script>

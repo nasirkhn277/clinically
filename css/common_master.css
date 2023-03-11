@@ -17,6 +17,7 @@ span{margin: 0; padding: 0;}
     text-overflow: ellipsis;
     white-space: nowrap
 }
+.boxsizing{box-sizing: border-box;}
 .rmarg{ margin-right: 10px !important;}
 .lmarg{margin-left: 10px !important;}
 .tmarg{ margin-top: 10px;}
@@ -26,8 +27,7 @@ span{margin: 0; padding: 0;}
 .redtxt{ color: #f00 !important;}
 .grntxt{ color: #00711D !important;}
 .ylwtxt{ color: #ff0 !important;}
-.grytxt{ color: #999 !important;}
-.bluetxt{ color: #006AFF !important;}
+.bluetxt{ color: #867669 !important;}
 .hide{ display: none !important;}
 input{outline-style: none;}
 .bg-pastel-red{ background: #f7d0d0;}
