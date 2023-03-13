@@ -1,20 +1,32 @@
 
 var db = require('../connection');
 var userController = require('../models/login');
+var timestamp = Math.floor(Date.now()/1000);
+const crypto = require("crypto");
 
 exports.userLogin = function(req, res, next) {
-    const {username, password} = req.body;
+    const {user_type, username, password} = req.body;
+    
     if(username && password){
-      var query = 'SELECT * FROM user_login WHERE UserName = ? AND Password = ?';
-      db.query(query, [username, password], function(error, data){
+      hash = crypto.pbkdf2Sync(password, 'clinicallyAdminUser', 1000, 64, `sha512`).toString(`hex`);
+      console.log( {user_type, username, password, hash})
+      if(user_type == '3'){
+        var query = 'SELECT * FROM cn_admin WHERE Mobile = ? AND Password = ? AND Active = ? AND RowDeleted = ?';
+      } else {
+        var query = 'SELECT * FROM user_login WHERE UserName = ? AND Password = ?';
+      }
+      db.query(query, [username, password, '1', '0'], function(error, data){
         if(data.length > 0){
-          res.redirect('/users');
+          var result = {status : true, message : 'Admin logined successfully.'};
+          res.send(result);
         } else {
-          res.redirect('/');
+          var result = {status : false, message : 'Username or password is incorrect.'};
+          res.send(result);
         }
       });
     } else {
-      res.redirect('/');
+      var result = {status : false, message : 'Please enter username & password.'};
+       res.send(result);
     }
     
   }
@@ -22,21 +34,21 @@ exports.userLogin = function(req, res, next) {
   exports.userSignup = function(req, res, next) {
 
     const req_data = req.body;
-    const {username, password, clinic_name, clinic_mobile, zip_code, address} = req_data;
-  
+
+    const {user_name, email, mobile, pass} = req_data;
+    
+    hash = crypto.pbkdf2Sync(pass, 'clinicallyAdminUser', 1000, 64, `sha512`).toString(`hex`);
+
     if(req_data){
-      var query = "INSERT INTO user_login (UserName, Password, Name, Mobile,  ZipCode, Address) VALUES (?) ";
-      db.query(query, [[username, password, clinic_name, clinic_mobile, zip_code, address]], function(error, data){
+      var query = "INSERT INTO cn_admin (Name, Mobile, Password, HashPassword,  Email, DateCreated, DateEdited) VALUES (?) ";
+      db.query(query, [[user_name, mobile, pass, hash, email, timestamp, timestamp]], function(error, data){
       if(error){
-        console.log('something went wrong');
-        res.render('static_error', {
-          pageTile : 'error',
-          message : 'Something Went Wrong'
-        });
+       // console.log(error);
+       var result = {status : false, message : 'Some Problem with input data'};
+       res.send(result);
       } else {
-        res.render('index', {
-          pageTile : 'Login'
-        });
+        var result = {status : true, message : 'Admin Signed up successfully'};
+        res.send(result);
       }
      });
     }

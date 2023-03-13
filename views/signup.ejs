@@ -11,23 +11,23 @@
                Setup your account. Go Clinically
             </div>
             <div class="form-field-wrap posrel parent_div">
-               <div class="form-type"><input type="text" class="frm-txtbox login-inputs boxsizing alphabet fldrequired" maxlength="50" placeholder="Your Name" value="" autocomplete="off"></div>
+               <div class="form-type"><input type="text" name="user_name" class="frm-txtbox login-inputs boxsizing alphabet fldrequired" maxlength="50" placeholder="Your Name" value="Nasir" autocomplete="off"></div>
 			   <div class="frm-er-msg"></div>
             </div>
             <div class="form-field-wrap posrel parent_div">
-               <div class="form-type"><input type="text" id="email" class="frm-txtbox login-inputs boxsizing fldrequired validate_email" placeholder="Email" value=""  autocomplete="off"></div>
+               <div class="form-type"><input type="text" id="email" name="email" class="frm-txtbox login-inputs boxsizing fldrequired validate_email" placeholder="Email" value="nasir@gmail.com"  autocomplete="off"></div>
 			   <div class="frm-er-msg"></div>
             </div>
             <div class="form-field-wrap posrel parent_div">
-               <div class="form-type"><input type="text" id="mobile" name="mobile" class="frm-txtbox login-inputs boxsizing integer fldrequired validate_mobile" placeholder="Mobile" value=""  autocomplete="off"></div>
+               <div class="form-type"><input type="text" id="mobile" name="mobile" class="frm-txtbox login-inputs boxsizing integer fldrequired validate_mobile" placeholder="Mobile" value="9721214950"  autocomplete="off"></div>
 			   <div class="frm-er-msg"></div>
             </div>
             <div class="form-field-wrap posrel parent_div">
-               <div class="form-type"><input type="password" id="pass" class="frm-txtbox login-inputs boxsizing fldrequired" placeholder="Create Password" value="" autocomplete="off"></div>
+               <div class="form-type"><input type="password" id="pass" name="pass" class="frm-txtbox login-inputs boxsizing fldrequired" placeholder="Create Password" value="Nasir@gh79" autocomplete="off"></div>
 			   <div class="frm-er-msg"></div>
             </div>
             <div class="form-field-wrap posrel parent_div">
-               <div class="form-type"><input type="password" id="cpass" class="frm-txtbox login-inputs boxsizing fldrequired" placeholder="Confirm Password" onchange="validatePassword()" value=""  autocomplete="off"></div>
+               <div class="form-type"><input type="password" id="cpass" name="cpass" class="frm-txtbox login-inputs boxsizing fldrequired" placeholder="Confirm Password" onchange="validatePassword()" value="Nasir@gh79"  autocomplete="off"></div>
                <div class="frm-er-msg"></div>
             </div>
             <div class="clr"></div>
@@ -35,7 +35,7 @@
                <a style="cursor: pointer;" id="save" class="primary loginbtn boxsizing save">Continue</a>
                <div class="clr"></div>
             </div>
-            <a class="signupbtn" href="/login">Already have an Account? LOGIN</a>
+            <a class="signupbtn" href="/">Already have an Account? LOGIN</a>
             <div class="clr"></div>
             <%- include('./includes/footer.ejs') %>
 			</form>

@@ -28,11 +28,49 @@ $(function(){
     });
 
     $('.parent_wrapper').on('click', '#save', () => {
-        var currfld = $(this);
-        var validity = validateField();
-        if(validity > 0){
-            return false;
-        }
-        formSubmit('frm', '/signup', currfld, 'save_admin');
+         var queryString = {};
+         $('#frm').serializeArray().map(function(item) {
+            queryString[item.name] = item.value;
+        });
+
+        fetch('/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(queryString)
+        }).then((res) => {
+            return res.json();
+        }).then((data) => {
+            if(data.status == true){
+                 window.location.href = '/';
+            } else {
+                return false;
+            }
+        });
     });
+
+    $('.parent_wrapper').on('click', '#login', () => {
+        var queryString = {};
+        $('#frm').serializeArray().map(function(item) {
+           queryString[item.name] = item.value;
+       });
+       
+       fetch('/login', {
+           method: 'POST',
+           headers: {
+               'Content-Type': 'application/json'
+           },
+           body: JSON.stringify(queryString)
+       }).then((res) => {
+           return res.json();
+       }).then((data) => { alert(data.status);
+           if(data.status == true){
+                window.location.href = '/clinics';
+           } else {
+
+               return false;
+           }
+       });
+   });
 })

@@ -1,78 +1,55 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Clinically</title>
-	<link href="/css/stylus.css" rel="stylesheet" type="text/css" />
-	<link href="/css/common_master.css" rel="stylesheet" type="text/css" />
-	<link href="/css/font.css" rel="stylesheet" type="text/css" />
-	<script src="/scripts/jquery-3.6.4.min.js"></script>
-	<script>
-        document.write('<style type="text/css">body{display:none}</style>');
-        jQuery(function (a) {
-            a("body").css("display", "block")
-        });
-    </script>
-</head>
-<body>
-	
-	<div class="login-block">
-		
-			<div class="left heroimg"><img src="img/heroimg.jpg" width="100%" height="" alt=""/>
-				<p>Is your smart clinic powered by AI?</p>
-			</div>
-			
-			<div class="login-wrapper right boxsizing">
-			<div class="welcom-log">
-				Login to AI Powered Clinic
-			</div>
-			<div class="form-field-wrap posrel">
-				<div class="logintype left">
-					<span class="left"><input type="radio" class="frm.typrdo" checked></span>
-					<p class="left">Clinic Manager</p>
-					<div class="clr"></div>
-				</div>
-				<div class="logintype left">
-					<span class="left"><input type="radio" class="frm.typrdo"></span>
-					<p class="left">Doctor</p>
-					<div class="clr"></div>
-				</div>
-				<div class="logintype left">
-					<span class="left"><input type="radio" class="frm.typrdo"></span>
-					<p class="left">Admin</p>
-					<div class="clr"></div>
-				</div>
-				<div class="clr"></div>
-			</div>
-			<div class="form-field-wrap posrel">
-				<div class="form-type"><input type="text" name="username" class="frm-txtbox login-inputs" placeholder="Username" value="nasir"></div>
-			</div>
-			<div class="form-field-wrap posrel">
-				<div class="form-type"><input type="password" name="password" class="frm-txtbox login-inputs" placeholder="Password" value="password"></div>
-			</div>
-			
-			<div class="bmarg bmarg"><a href="#">Unable to login?</a></div>
-			<div class="clr"></div>
-			<div class="actionbuttons tmarg">
-				
-				<a href="#" class="primary loginbtn boxsizing">Continue</a><div class="clr"></div>
-
-			</div>
-				
-				<a class="signupbtn" href="/signup">New to Clinically? SIGNUP</a>
-				
-			<div class="clr"></div>
-			  <div class="footer-wrapper alc">Copyright © 2023 - Clinically: AI Powered Clinics</div>
-	  </div>
-			
-			<div class="clr"></div>
-	
-</div>
-	
-</body>
+<%- include('head.ejs') %>
+   <body>
+      <div class="login-block">
+         <div class="left heroimg">
+            <img src="img/heroimg.jpg" width="100%" height="" alt=""/>
+            <p>Is your smart clinic powered by AI?</p>
+         </div>
+         <div class="login-wrapper right boxsizing parent_wrapper">
+            <div class="welcom-log">
+               Login to AI Powered Clinic
+            </div>
+            <form id="frm">
+               <div class="form-field-wrap posrel">
+                  <div class="logintype left">
+                     <span class="left"><input type="radio" name="user_type" class="frm.typrdo" value="1" checked></span>
+                     <p class="left">Clinic Manager</p>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="logintype left">
+                     <span class="left"><input type="radio" name="user_type" class="frm.typrdo" value="2"></span>
+                     <p class="left">Doctor</p>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="logintype left">
+                     <span class="left"><input type="radio" name="user_type" class="frm.typrdo" value="3"></span>
+                     <p class="left">Admin</p>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="clr"></div>
+               </div>
+               <div class="form-field-wrap posrel">
+                  <div class="form-type"><input type="text" name="username" class="frm-txtbox login-inputs" placeholder="Username" value="9721214950"></div>
+               </div>
+               <div class="form-field-wrap posrel">
+                  <div class="form-type"><input type="password" name="password" class="frm-txtbox login-inputs" placeholder="Password" value="Nasir@gh79"></div>
+               </div>
+            </form>
+            <div class="bmarg bmarg"><a href="#">Unable to login?</a></div>
+            <div class="clr"></div>
+            <div class="actionbuttons tmarg">
+				<a style="cursor: pointer;" id="login" class="primary loginbtn boxsizing save">Continue</a>
+               <div class="clr"></div>
+            </div>
+            <a class="signupbtn" href="/signup">New to Clinically? SIGNUP</a>
+            <div class="clr"></div>
+            <%- include('./includes/footer.ejs') %>
+         </div>
+         <div class="clr"></div>
+      </div>
+   </body>
 </html>
-
-<script>
-	// var username = $('#username').val();
-	// alert(username);
-</script>
+<script src="/scripts/common.js"></script>
+<script src="/scripts/common.function.js"></script>
+<script src="/scripts/main.js"></script>
+<script src="/scripts/admin.js"></script>
