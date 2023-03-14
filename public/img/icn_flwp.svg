@@ -1,0 +1,13 @@
+<svg id="icn_flwp" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <rect id="Rectangle_1" data-name="Rectangle 1" width="50" height="50" fill="none"/>
+  <g id="Group_1" data-name="Group 1" transform="translate(-3 -3)">
+    <path id="Path_8" data-name="Path 8" d="M9.778,16.556a2.778,2.778,0,1,1,2.778-2.778A2.778,2.778,0,0,1,9.778,16.556Z" transform="translate(7.111 14.222)" fill="#9e4784"/>
+    <path id="Path_9" data-name="Path 9" d="M9.778,20.556a2.778,2.778,0,1,1,2.778-2.778A2.778,2.778,0,0,1,9.778,20.556Z" transform="translate(7.111 21.333)" fill="#9e4784"/>
+    <path id="Path_10" data-name="Path 10" d="M11,17.778A2.778,2.778,0,1,0,13.778,15,2.778,2.778,0,0,0,11,17.778Z" transform="translate(14.222 21.333)" fill="#9e4784"/>
+    <path id="Path_11" data-name="Path 11" d="M17.778,20.556a2.778,2.778,0,1,1,2.778-2.778A2.778,2.778,0,0,1,17.778,20.556Z" transform="translate(21.333 21.333)" fill="#9e4784"/>
+    <path id="Path_12" data-name="Path 12" d="M11,13.778A2.778,2.778,0,1,0,13.778,11,2.778,2.778,0,0,0,11,13.778Z" transform="translate(14.222 14.222)" fill="#9e4784"/>
+    <path id="Path_13" data-name="Path 13" d="M17.778,16.556a2.778,2.778,0,1,1,2.778-2.778A2.778,2.778,0,0,1,17.778,16.556Z" transform="translate(21.333 14.222)" fill="#9e4784"/>
+    <path id="Path_14" data-name="Path 14" d="M9.778,7a2.778,2.778,0,0,0,0,5.556H32A2.778,2.778,0,1,0,32,7Z" transform="translate(7.111 7.111)" fill="#9e4784"/>
+    <path id="Path_15" data-name="Path 15" d="M11.333,3A8.333,8.333,0,0,0,3,11.333V44.667A8.333,8.333,0,0,0,11.333,53H44.667A8.333,8.333,0,0,0,53,44.667V11.333A8.333,8.333,0,0,0,44.667,3ZM44.667,8.556H11.333a2.778,2.778,0,0,0-2.778,2.778V44.667a2.778,2.778,0,0,0,2.778,2.778H44.667a2.778,2.778,0,0,0,2.778-2.778V11.333A2.778,2.778,0,0,0,44.667,8.556Z" transform="translate(0 0)" fill="#9e4784" fill-rule="evenodd"/>
+  </g>
+</svg>

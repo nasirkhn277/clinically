@@ -289,7 +289,7 @@ span.promoline{text-align: center;
 
 
 /*main content column of website*/
-.col-wrapper{margin: 1% 1% 50px 1%;min-height: 400px;z-index: 1;position: relative;}
+.col-wrapper{margin-bottom: 50px;min-height: 400px;z-index: 1;position: relative;}
 
 .content-block{margin-bottom: 40px;padding-bottom: 15px;border-bottom: 1px solid #ddd;}
 .content-title{font-size: 16px;font-weight: 500;margin-bottom: 20px;}
@@ -305,7 +305,7 @@ span.promoline{text-align: center;
 
 
 /*footer*/
-.footer-wrapper{font-size: 12px; color: #666; margin-top: 25px !important;}
+.footer-wrapper{font-size: 12px; color: #666; margin-top: 15px !important;margin-right: 0.8vw;}
 
 
 /*navigation page*/
@@ -363,7 +363,7 @@ input.navsrbox{background: none;border: none;padding: 0 5px;color: #fff;font-siz
 .db-menu ul li a.active{background: #9E4784;color: #fff;}
 
 /*full column page*/
-.full-column{background: #fff;border: 1px solid #ddd;border-radius: 2px;border-bottom: 2px solid #9E4784;}
+.full-column{background: #fff;border: 1px solid #ddd;border-radius: 2px;border-bottom: 2px solid #9E4784;margin-top: 1.8vh;margin-right: 0.7vw;}
 
 /*two-column page*/
 .two-column-l{ width: 55%}
@@ -373,14 +373,14 @@ input.navsrbox{background: none;border: none;padding: 0 5px;color: #fff;font-siz
 .threefour-column{background: #fff;border: 1px solid #ddd;border-radius: 2px;border-bottom: 2px solid #9E4784; width: 82%;}
 
 /*onefour column sidebar*/
-.sidebar{width:16%; background: #fff;border-radius: 2px;border-top: 2px solid #9E4784;min-height: 400px;position: fixed;overflow: scroll;height: 83%;}
+.sidebar{width:17%; background: #fff;/*! border-radius: 2px; *//*! border-top: 2px solid #9E4784; */min-height: 400px;position: fixed;overflow: scroll;height: 83%;}
 .sidebar ul{margin:0; padding: 0; list-style-type: none;}
-.sidebar ul li{margin:0; padding: 10px 15px; list-style-type: none; display: block;border-bottom: 1px solid #ddd;}
-.sidebar ul li a{color: #000;}
-.sidebar ul li a:hover, .sidebar ul li a.active{ color: #9E4784;}
+.sidebar ul li{margin:0; padding:15px; list-style-type: none; display: block;border-bottom: 1px solid #ddd;}
+.sidebar ul li a{color: #ffffff90;}
+.sidebar ul li a:hover, .sidebar ul li a.active{ color: #fff;}
 .sidebar ul li a.active{  font-weight: 500;}
 .sidebar ul li a span{ float:left;}
-.sidebar ul li a span.actnme{width: 165px;line-height: 26px;font-size: 14px;}
+.sidebar ul li a span.actnme{width: 165px;line-height: 18px;font-size: 14px;}
 .sidebar ul li a span.actmre{padding-top: 3px;}
 .sidebar ul li ul{margin:0; padding:5px; list-style-type: none; display: block;}
 .sidebar ul li ul li{margin:0 0 2px 0; padding:0; list-style-type: none; display: block;border: none;}
@@ -392,8 +392,8 @@ input.navsrbox{background: none;border: none;padding: 0 5px;color: #fff;font-siz
 .col-pagename{font-size: 18px;font-weight: 500;line-height: 38px;}
 .master-creation{padding: 10px 0;}
 .master-creation span{ display: block;float: left;}
-.master-creation span.crticn{margin-right: 8px;}
-.master-creation span.crtxt{font-size: 16px;font-weight: 500;line-height: 16px;}
+.master-creation span.crticn{margin-right: 8px; width: auto;}
+.master-creation span.crtxt{font-size: 14px;font-weight: 600;line-height: 16px;width: auto;}
 .pageback{}
 .pageback a{display: block;padding: 10px;padding-left: 0;padding-right: 20px;}
 
@@ -574,15 +574,15 @@ input.frm-focus{border-bottom: 2px solid #9E4784 !important;}
 textarea.frm-txarea{padding: 7px 2px;font-size: 14px;border: none;border-bottom: 2px solid #ddd !important;margin-bottom: 5px;width: 250px;outline-style: none;resize: none;font-family: inherit;height: 80px;letter-spacing: 0.2px; color: #9E4784;}
 .frm-slc-list{width: 200px;background: #fff;padding: 10px;border-bottom: 2px solid #ddd;}
 .frm-slc-list span{}
-.frm-slc-list span.frmtitle{}
-.frm-slc-list span.frmdrp{margin-top: 2px;}
+.frm-slc-list span.frmtitle{width: auto;}
+.frm-slc-list span.frmdrp{margin-top: 2px;width: auto;}
 .frm-optnlistwrap{width: 220px;background: #f9f9f9; box-shadow: 0px 0px 7px 3px #e6e6e6;z-index: 1;}
 .frm-slc-optn{}
 .frm-slc-optn:hover{ background: #f4f4f4;}
 .frm-opitm{padding: 10px;border-bottom: 1px solid #ddd;}
 .frm-opitm span{}
-.frm-opitm span.frmcx{margin-right: 6px;}
-.frm-opitm span.frmtx{width: 170px;font-size: 13px;line-height: 18px;}
+.frm-opitm span.frmcx{margin-right: 6px;width: auto;}
+.frm-opitm span.frmtx{width: auto;font-size: 13px;line-height: 18px;}
 .frm-lbltitl{padding: 10px;font-weight: 500;}
 .frm-rdowrap{padding: 10px; border-radius: 4px;}
 .frm-rdowrap:hover{ background:#f4f4f4;}
@@ -610,7 +610,7 @@ textarea.frm-txarea{padding: 7px 2px;font-size: 14px;border: none;border-bottom:
 .frm-rqrd{}
 .frm-rqrd p{ color: #FB5858}
 .actionbuttons{}
-.actionbuttons a{padding: 10px 20px;border-radius: 2px;text-transform: uppercase;font-weight: 500;font-size: 14px; display: block;}
+.actionbuttons a{padding: 10px 20px;border-radius: 4px;text-transform: uppercase;font-weight: 500;font-size: 14px; display: block;min-width: 60px;text-align: center;}
 .actionbuttons a:hover{background: #f4f4f4;}
 .actionbuttons a.primary{background: #9E4784;color: #fff;}
 .actionbuttons a.secondary{background: #f4f4f4;color: #000;}
@@ -957,7 +957,7 @@ strong {font-weight: 500;}
 }
 
 /*consultation timing management create view edit*/
-.dayplan-wrap{padding: 20px;background: #e4f7f5;margin-bottom: 20px;border-radius: 4px;}
+.dayplan-wrap{padding: 20px;background: #f9f9f9;margin-bottom: 20px;border-radius: 8px;}
 .day-name{font-size: 20px;margin-bottom: 25px;font-weight: 500;}
 .day-console{margin-bottom: 40px;padding-bottom: 20px;border-bottom: 1px dashed #999;}
 .drg1{margin-right: 50px !important;}
@@ -980,11 +980,8 @@ strong {font-weight: 500;}
            color: #fff;
            font-size: 13px;
            padding: 6px 20px;}
-.dyslctns{margin-right: 20px;
+.dyslctns{margin-right: 10px;
           background: #f4f4f4;
-          font-size: 15px;
-          font-weight: 500;
-          color: #9E4784;
           padding: 7px 12px;
           border-radius: 6px;}
 .dyslctns p{}
@@ -1226,10 +1223,10 @@ color: #fff;}
           padding: 7px 16px;
           border-radius: 8px 8px 0 0;
           margin-right: 15px;
-          color: #999;
+          color: #666666;
           background: #f4f4f4;}
 .tabl3 a.active, .tabl3 a:hover{background: #9E4784;color: #fff;}
-.tabl3 a p{ display: block;font-size: 13px;font-weight: 400;letter-spacing: 0.4px;margin-bottom: 5px;}
+.tabl3 a p{ display: block;font-size: 13px;font-weight: 400;letter-spacing: 0.4px;}
 .tabl3 a span{display: block;font-size: 12px;color: #999;}
 
 .mq-fldwrap{/*! padding: 12px 15px; */
@@ -1942,13 +1939,15 @@ font-weight: 400;}
 
 .view-mode{font-size: 14px;padding: 20px 0;border-bottom: 1px dashed #ddd;}
 .view-mode p{color: #666;width: 20%;}
-.view-mode span{float: left;width: 80%;}
+.view-mode span{width: 80%;}
 .view-mode span a{color: #9E4784;}
 
 .editmode .view-mode{ border:none;}
 .editmode .view-mode p{ line-height: 36px;}
 .editmode input.frm-txtbox{border: 1px solid #ddd;border-bottom: 1px solid #ddd !important;padding: 7px;border-radius: 4px;width: 400px;}
 .editmode input.frm-txtbox:focus{ background: #9E478420; border: 1px solid #9E4784;border-bottom: 1px solid #9E4784 !important;}
+.editmode .frm-slc-list{width: 420px;border: 1px solid #ddd;border-radius: 4px;padding: 7px;}
+.editmode .frm-optnlistwrap{width: 420px;max-height: 300px;overflow: auto;}
 
 .editmode textarea{border: 1px solid #ddd;border-bottom: 1px solid #ddd !important;padding: 7px;border-radius: 4px;width: 400px;}
 .editmode textarea:focus{ background: #9E478420; border: 1px solid #9E4784;border-bottom: 1px solid #9E4784 !important;}
@@ -1965,6 +1964,21 @@ font-weight: 400;}
 
 
 a.signupbtn{text-align: center;display: block;padding: 10px;margin-top: 20px;font-size: 16px;font-weight: 600;color: #9E4784;}
+
+.avlbl-wrap{ width: 175px;padding: 15px;margin-right: 20px;background: #9E478410;border-radius: 8px; display: inline-block;min-height: 145px;/*! overflow: auto; */ margin-bottom: 20px;vertical-align: top;}
+.dayname{font-size: 16px;font-weight: 800;margin-bottom: 10px;text-transform: uppercase;}
+.timebound{padding-bottom: 10px;margin-bottom: 10px;border-bottom: 1px dotted #999;line-height: 22px;}
+.calwrap{}
+
+.timebound span{}
+.tslot{font-weight: 600;}
+.tslot p{}
+.tslot span{}
+
+.openote{color: #ffb4f3;padding: 8%;font-size: 14px;}
+.wlcm-vdoprvw{ margin: 15px 0;}
+
+
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1366px) and (orientation:landscape) {
     .pp-large-x {width: 800px;}

@@ -9,13 +9,13 @@ exports.userLogin = function(req, res, next) {
     
     if(username && password){
       hash = crypto.pbkdf2Sync(password, 'clinicallyAdminUser', 1000, 64, `sha512`).toString(`hex`);
-      console.log( {user_type, username, password, hash})
+      console.log({user_type, username, password, hash})
       if(user_type == '3'){
-        var query = 'SELECT * FROM cn_admin WHERE Mobile = ? AND Password = ? AND Active = ? AND RowDeleted = ?';
+        var query = 'SELECT * FROM cn_admin WHERE Mobile = ? AND HashPassword = ? AND Active = ? AND RowDeleted = ?';
       } else {
         var query = 'SELECT * FROM user_login WHERE UserName = ? AND Password = ?';
       }
-      db.query(query, [username, password, '1', '0'], function(error, data){
+      db.query(query, [username, hash, '1', '0'], function(error, data){ console.log(data);
         if(data.length > 0){
           var result = {status : true, message : 'Admin logined successfully.'};
           res.send(result);
@@ -28,7 +28,6 @@ exports.userLogin = function(req, res, next) {
       var result = {status : false, message : 'Please enter username & password.'};
        res.send(result);
     }
-    
   }
 
   exports.userSignup = function(req, res, next) {

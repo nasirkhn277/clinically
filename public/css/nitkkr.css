@@ -8,16 +8,16 @@
 }
 
 .db-cont-wrap {
-    width: 82% !important;}
+    width: 81% !important;}
 .helpwrap,.profile-wrap{padding: 15px 10px !important;}
-.sidebar{ height: 82% !important;box-shadow: 0px 0px 9px -2px #999 !important;
-          border-radius: 4px !important;
-          background:#9E478410 !important;}
-.sidebar ul li{border-bottom:1px solid #9E478440 !important;}
-.sidebar ul li a{ font-size: 15px !important; font-weight: 500 !important;}
+.sidebar{ height: 100vh !important;box-shadow: 0px 0px 9px -2px #999 !important;
+          /*! border-radius: 4px !important; */
+          background:#53123F !important;}
+.sidebar ul li{border-bottom:1px solid #6F2458 !important;border-top: 1px solid #2F0522 !important;}
+.sidebar ul li a{ font-size: 15px !important; /*! font-weight: 500 !important; */}
 .tbl-actn a{padding:7px !important; background:none !important;}
 .tbl-actn a:hover{ background-color: #ddd !important;}
-.sidebar ul li a:hover, .sidebar ul li a.active{ color: #867669; background: #999 !important;}
+.sidebar ul li a:hover, .sidebar ul li a.active{ color: #fff; background: #999 !important;}
 .cnc-map p{float: left;
            background: #f4f4f4;
            padding: 0px 15px;
@@ -106,7 +106,7 @@ span.fpnd{color: red;}
 .semfeevw{background: #f9f9f9;font-size: 13px;padding: 10px 15px;border-radius: 4px;margin-bottom: 10px;margin-right: 15px;box-shadow: 0px 0px 4px 0px #bbb !important;}
 .semfeevw p{color: #666;}
 .semfeevw span{font-size: 18px;margin-top: 5px;display: block;}
-.sidebar ul li a span.acticn{width:25px; height:25px; text-align: center;margin-right: 8px;}
+.sidebar ul li a span.acticn{width:18px; height:18px; text-align: center;margin-right: 12px;}
 .prcs-stus{}
 .prcs-stus p{background:#fdfcc8;color: #858585;font-weight: 500;display: inline-block;padding: 0px 13px;border-radius: 30px;line-height: 24px;margin: 0 2px;font-size: 12px;}
 .cstbtm .prcs-stus p{margin: 8px 0;}
