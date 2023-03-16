@@ -5,6 +5,8 @@ var clinicsController = require('../controllers/clinics');
 /* GET users listing. */
 router.get('/', clinicsController.clinics);
 
-//router.post('/', userController.addDoctor);
+router.get('/addclinic', clinicsController.addClinic);
+
+router.post('/addclinic', clinicsController.addClinicDetails);
 
 module.exports = router;

@@ -1,0 +1,221 @@
+<%- include('head.ejs') %>
+<body>
+	<%- include('includes/header.ejs') %>
+<div class="wrapper">
+	
+	<div class="col-wrapper parent_wrapper">
+		<%- include('includes/sidebarmenu.ejs') %>
+		
+		<div class="full-column db-cont-wrap right">
+		
+			<div class="column-head">
+				<div class="col-pagename left">Add Clinic Profile</div>
+				
+				<div class="actionbuttons right">
+					<a href="#" class="secondary left rmarg">Cancel</a>
+					<a class="primary left rmarg" id="addClinic">Save</a>
+				<div class="clr"></div>
+				</div>
+				
+				<div class="clr"></div>
+			</div>
+			<form id="frm">
+			<div class="content-page boxsizing editmode">
+
+			<div class="view-mode">
+				<p class="left">Clinic Name</p>
+				<span><input type="text" class="frm-txtbox" maxlength="100" name="clinic_name" placeholder="Eg. Health Clinic"></span>
+				<div class="clr"></div>
+			</div>
+				
+			<div class="view-mode">
+				<p class="left">Area / Location</p>
+				<span><input type="text" class="frm-txtbox" maxlength="50" placeholder="Eg. Aminabad"></span>
+				<div class="clr"></div>
+			</div>
+				
+			<div class="view-mode">
+				<p class="left">Address</p>
+				<span><textarea class="frm-txarea" maxlength="250" placeholder="Enter Address"></textarea></span>
+				<div class="clr"></div>
+			</div>
+				
+			<div class="view-mode">
+				<p class="left">ZIP Code</p>
+				<span><input type="text" class="frm-txtbox integer" maxlength="6" placeholder="Eg. 112233"></span>
+				<div class="clr"></div>
+			</div>
+				
+			<div class="view-mode">
+				<p class="left">Google Location</p>
+				<span><input type="text" class="frm-txtbox" maxlength="500" placeholder="copy from maps.google.com">
+				<br>
+					<div class="frm-file-specs">
+					Visit maps.google.co and find your business. Copy link and paste here.
+				</div>
+				</span>
+				
+				<div class="clr"></div>
+			</div>
+				
+			<div class="view-mode">
+				<p class="left">Phone / Mobile</p>
+				<span><input type="text" class="frm-txtbox integer" maxlength="10" placeholder="Eg. 9999000011"></span>
+				<div class="clr"></div>
+			</div>
+				
+			<div class="view-mode">
+				<p class="left">Email</p>
+				<span><input type="text" class="frm-txtbox" maxlength="45" placeholder="Eg. first.lastname@gmail.com"></span>
+				<div class="clr"></div>
+			</div>
+
+			<div class="view-mode">
+				<p class="left">Clinic Registration No.</p>
+				<span><input type="text" class="frm-txtbox" maxlength="50" placeholder="Eg. 75634875348"></span>
+				<div class="clr"></div>
+			</div>
+				
+			<div class="view-mode">
+				<p class="left">Open Days & Timings</p>
+				<span class="left">
+					<div class="ccltime">
+						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="1"></div>
+						<div class="left frm-rdotxt text-wrapping rmarg">Monday</div>
+						<div class="left rmarg"><input type="time" name="from[]" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left" style="margin-right: 50px;"><input type="time" name="till[]" class="frm-txtbox cldate" placeholder="Till"></div>
+						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+						<div class="clr"></div>
+					</div>
+					<div class="ccltime">
+						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="2"></div>
+						<div class="left frm-rdotxt text-wrapping rmarg">Tuesday</div>
+						<div class="left rmarg"><input type="time" name="from[]" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left" style="margin-right: 50px;"><input type="time" name="till[]" class="frm-txtbox cldate" placeholder="Till"></div>
+						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+						<div class="clr"></div>
+					</div>
+					<div class="ccltime">
+						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="3"></div>
+						<div class="left frm-rdotxt text-wrapping rmarg">Wednesday</div>
+						<div class="left rmarg"><input type="time" name="from[]" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left" style="margin-right: 50px;"><input type="time" name="till[]" class="frm-txtbox cldate" placeholder="Till"></div>
+						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+						<div class="clr"></div>
+					</div>
+					<div class="ccltime">
+						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="4"></div>
+						<div class="left frm-rdotxt text-wrapping rmarg">Thursday</div>
+						<div class="left rmarg"><input type="time" name="from[]" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left" style="margin-right: 50px;"><input type="time" name="till[]" class="frm-txtbox cldate" placeholder="Till"></div>
+						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+						<div class="clr"></div>
+					</div>
+					<div class="ccltime">
+						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="5"></div>
+						<div class="left frm-rdotxt text-wrapping rmarg">Friday</div>
+						<div class="left rmarg"><input type="time" name="from[]" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left" style="margin-right: 50px;"><input type="time" name="till[]" class="frm-txtbox cldate" placeholder="Till"></div>
+						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+						<div class="clr"></div>
+					</div>
+					<div class="ccltime">
+						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="6"></div>
+						<div class="left frm-rdotxt text-wrapping rmarg">Saturday</div>
+						<div class="left rmarg"><input type="time" name="from[]" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left" style="margin-right: 50px;"><input type="time" name="till[]" class="frm-txtbox cldate" placeholder="Till"></div>
+						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+						<div class="clr"></div>
+					</div>
+					<div class="ccltime">
+						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="7"></div>
+						<div class="left frm-rdotxt text-wrapping rmarg">Sunday</div>
+						<div class="left rmarg"><input type="time" name="from[]" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left" style="margin-right: 50px;"><input type="time" name="till[]" class="frm-txtbox cldate" placeholder="Till"></div>
+						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+						<div class="clr"></div>
+					</div>
+				</span>
+				<div class="clr"></div>
+			</div>
+				
+				
+			<div class="view-mode">
+				<p class="left">Facilities Available</p>
+				<span>
+					<div>
+					<div class="left frm-rdowrap">
+						<div class="frm-rdobtn left"><input type="checkbox" name="facility[]" class="frm.typrdo"></div>
+						<div class="left text-wrapping">Parking</div>
+						<div class="clr"></div>
+					</div>
+					<div class="left frm-rdowrap">
+						<div class="frm-rdobtn left"><input type="checkbox" name="facility[]" class="frm.typrdo"></div>
+						<div class="left text-wrapping">Lounge</div>
+						<div class="clr"></div>
+					</div>
+					<div class="left frm-rdowrap">
+						<div class="frm-rdobtn left"><input type="checkbox" name="facility[]" class="frm.typrdo"></div>
+						<div class="left text-wrapping">Wheelchair</div>
+						<div class="clr"></div>
+					</div>
+					<div class="left frm-rdowrap">
+						<div class="frm-rdobtn left"><input type="checkbox" name="facility[]" class="frm.typrdo"></div>
+						<div class="left text-wrapping">Vital Checkup</div>
+						<div class="clr"></div>
+					</div>
+					<div class="clr"></div>
+				</div>
+				</span>
+				<div class="clr"></div>
+			</div>
+				
+			<div class="view-mode">
+				<p class="left">Username to Login</p>
+				<span><input type="text" class="frm-txtbox" name="user_name" placeholder="clinci123" autocomplete="off"></span>
+				<div class="clr"></div>
+			</div>
+			
+			<div class="view-mode">
+				<p class="left">Password</p>
+				<span><input type="password" name="password" class="frm-txtbox" placeholder="" autocomplete="off"></span>
+				<div class="clr"></div>
+			</div>
+				
+			<div class="view-mode">
+				<p class="left">Status</p>
+				<span><div class="select dev_req_msg">
+                            <select name="status" id="status">
+                                <option value="1">Active</option>
+                                <option value="0">Deactive</option>
+                            </select>
+                            <div class="select__arrow"></div>
+                        </div></span>
+				<div class="clr"></div>
+			</div>
+				
+			<div class="actionbuttons right" style="padding: 30px 0px;">
+					<a href="#" class="secondary left rmarg">Cancel</a>
+					<a class="primary left rmarg" id="addClinic">Save</a>
+				<div class="clr"></div>
+				</div>
+			</div>	
+		</form>
+		</div>
+		<div class="clr"></div>
+		<%- include('includes/footer.ejs') %>
+	</div>		
+</div>
+</body>
+</html>
+<script src="/scripts/common.js"></script>
+<script src="/scripts/common.function.js"></script>
+<script src="/scripts/main.js"></script>
+<script src="/scripts/admin.js"></script>

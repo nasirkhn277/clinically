@@ -73,4 +73,33 @@ $(function(){
            }
        });
    });
+
+   $('.parent_wrapper').on('click', '#addClinic', () => {
+    var queryString = {};
+//     $('#frm').serializeArray().map(function(item) {
+//        queryString[item.name] = item.value;
+//    });
+// var checkboxes = document.getElementsByName('day[]');
+
+// alert(checkboxes);
+
+var formData = new FormData(form, submitter);
+alert(JSON.stringify(formData));
+   fetch('/clinics/addclinic', {
+       method: 'POST',
+       headers: {
+           'Content-Type': 'application/json'
+       },
+       body: JSON.stringify(queryString)
+   }).then((res) => {
+       return res.json();
+   }).then((data) => { alert(data);
+       if(data.status == true){
+            window.location.href = '/clinics';
+       } else {
+
+           return false;
+       }
+   });
+});
 })
