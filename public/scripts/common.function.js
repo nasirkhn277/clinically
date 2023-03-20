@@ -52,10 +52,10 @@ var validateField = () => {
         $(".fldrequired").each(function () {
             if ($(this).val().trim() == "") {
                 check++;
-                $(this).closest(".parent_div").next(".frm-er-msg").text("This field is required");
+                $(this).closest(".parent_div").find(".frm-er-msg").text("This field is required");
                 $(this).addClass("frm-error");
             } else {
-                $(this).closest(".parent_div").next(".frm-er-msg").text("");
+                $(this).closest(".parent_div").find(".frm-er-msg").text("");
                 $(this).removeClass("frm-error");
             }
         });

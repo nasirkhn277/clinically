@@ -1,4 +1,5 @@
 var db = require('../connection');
+var bodyParser = require('body-parser');
 var timestamp = Math.floor(Date.now()/1000);
 
 exports.clinics = function(req, res, next) {
