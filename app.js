@@ -9,21 +9,21 @@ var session = require('express-session');
 const multer  = require('multer')
 var forms = multer();
 
+var app = express();
+
+app.use(session({
+  secret: 'clinically',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false }
+}));
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var signup = require('./routes/signup');
 var doctor = require('./routes/doctor');
 var clinics = require('./routes/clinics');
-
-var app = express();
-
-app.use(session({
-  secret: 'clinically',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: true }
-}))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

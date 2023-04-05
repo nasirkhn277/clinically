@@ -18,24 +18,26 @@
 				<div class="table-head">
 					<div class="left tbl-cell size-xl text-wrapping">Clinic Name</div>
 					<div class="left tbl-cell size-s text-wrapping">Area/Location</div>
-					<div class="left tbl-cell size-s text-wrapping">Drs. Mapped</div>
+					<div class="left tbl-cell size-s text-wrapping">Mobile</div>
 					<div class="left tbl-cell size-s text-wrapping">Created on</div>
 					<div class="left tbl-cell size-m text-wrapping">Username</div>
-					<div class="left tbl-cell size-m text-wrapping">Password</div>
+					<div class="left tbl-cell size-m text-wrapping">Clinic code</div>
 					<div class="left tbl-cell size-s text-wrapping">Status</div>
 					<div class="clr"></div>
 				</div>
 				
 				<div class="table-body">
-				
+					<% result.forEach(function(result){ 
+						var date = new Date(result.DateCreated*1000)
+						%>
 					<div class="table-row">
-					<div class="left tbl-cell size-xl text-wrapping">Heileen Homeopathy Clinic</div>
-					<div class="left tbl-cell size-s text-wrapping">Aminabad</div>
-					<div class="left tbl-cell size-s text-wrapping">4</div>
-					<div class="left tbl-cell size-s text-wrapping">24 May, 2022</div>
-					<div class="left tbl-cell size-m text-wrapping">ccn08909</div>
-					<div class="left tbl-cell size-m text-wrapping">••••••••</div>
-					<div class="left tbl-cell size-s text-wrapping grntxt">Active</div>
+					<div class="left tbl-cell size-xl text-wrapping"><%= result.Name ? result.Name : '--'; %></div>
+					<div class="left tbl-cell size-s text-wrapping"><%= result.Location ? result.Location : '--'; %></div>
+					<div class="left tbl-cell size-s text-wrapping"><%= result.Mobile ? result.Mobile : '--'; %></div>
+					<div class="left tbl-cell size-s text-wrapping"><%= date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() %></div>
+					<div class="left tbl-cell size-m text-wrapping"><%= result.UserName ? result.UserName : '--'; %></div>
+					<div class="left tbl-cell size-m text-wrapping"><%= result.Code ? result.Code : '--'; %></div>
+					<div class="left tbl-cell size-s text-wrapping <%= result.Active == '1' ? 'grntxt' : 'redtxt'; %>"><%= result.Active == '1' ? 'Active' : 'Deactive'; %></div>
 					<div class="right tbl-actn posrel">
 						<a href="#"><img src="img/more-vertical-dark.svg" alt="" height="18px"></a>
 						<span class="drop-actns posabsolut hide">
@@ -47,7 +49,7 @@
 					</div>
 					<div class="clr"></div>
 					</div>
-					
+					<% }); %>
 					<div class="table-row row-highlight-red">
 					<div class="left tbl-cell size-xl text-wrapping">Heileen Homeopathy Clinic</div>
 					<div class="left tbl-cell size-s text-wrapping">Aminabad</div>
@@ -67,11 +69,6 @@
 					</div>
 					<div class="clr"></div>
 					</div>
-					
-					
-					
-					
-					
 				</div>
 				
 				<div class="pagination">

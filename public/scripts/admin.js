@@ -68,7 +68,6 @@ $(function(){
            if(data.status == true){
                 window.location.href = '/clinics';
            } else {
-
                return false;
            }
        });
@@ -90,7 +89,11 @@ $(function(){
         }).then((res) => {
             return res.json();
         }).then((data) => {
-            console.log(data);
+            if(data.status == true){
+                window.location.href = '/clinics';
+           } else {
+               return false;
+           }
         });
       });
       $('#frm').submit();
