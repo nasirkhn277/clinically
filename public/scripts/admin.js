@@ -107,4 +107,32 @@ $(function(){
             return false;
         }
     });
+
+    $('.availradiobtn').on('change', function() {
+        var selected = $('input[name="day_type"]:checked').val();
+        if(selected == 0){
+            $('#customised_schedule').addClass('hide');
+            $('input[name="day[]"]').removeAttr('checked');
+            $('input[name="from[]"]').val('');
+            $('input[name="till[]"]').val('');
+        } else {
+            $('#customised_schedule').removeClass('hide');
+            $('input[name="day[]"]').attr('checked','checked');
+        }
+     });
+
+     $('#same_for_all').on('change', function() {
+        var selected = $('input[name="same_for_all"]:checked').val();
+        var from = $('input[name="from[]"]').val();
+        var till = $('input[name="till[]"]').val();
+        if(selected == 1){
+            $('input[name="day[]"]:checked').each(function() {
+              $(this).closest('.ccltime').find('.open_time').val(from);
+              $(this).closest('.ccltime').find('.close_time').val(till);
+             });             
+        } else {
+            $('.open_time').val('');
+            $('.close_time').val('');
+        }
+     });
 })

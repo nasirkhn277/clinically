@@ -9,7 +9,7 @@
 		<div class="full-column db-cont-wrap right">
 		
 			<div class="column-head">
-				<div class="col-pagename left">Add Clinic Profile</div>
+				<div class="col-pagename left">Edit Clinic Profile</div>
 				
 				<div class="actionbuttons right">
 					<a style="cursor: pointer;" id="cancel_page" class="secondary left rmarg cancel_page">Cancel</a>
@@ -87,69 +87,82 @@
 			<div class="view-mode parent_div">
 				<p class="left">Open Days & Timings</p>
 				<span class="left">
-					<div class="ccltime">
-						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="1" checked></div>
-						<div class="left frm-rdotxt text-wrapping rmarg">Monday</div>
-						<div class="left rmarg"><input type="text" name="from[]" id="timepicker" class="frm-txtbox cldate sptime" placeholder="From"></div>
-						<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate sptime" placeholder="Till"></div>
-						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
-						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+					<div class="ccltime left">
+						<div class="frm-rdobtn left"><input type="radio" name="day_type" class="frm.typrdo availradiobtn" value="0" checked></div>
+						<div class="left frm-rdotxt text-wrapping rmarg">24/7 Open</div>
 						<div class="clr"></div>
 					</div>
 					<div class="ccltime">
-						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="2" checked></div>
-						<div class="left frm-rdotxt text-wrapping rmarg">Tuesday</div>
-						<div class="left rmarg"><input type="text" name="from[]" class="frm-txtbox cldate sptime" placeholder="From"></div>
-						<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate sptime" placeholder="Till"></div>
-						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
-						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+						<div class="frm-rdobtn left"><input type="radio" name="day_type" class="frm.typrdo availradiobtn" value="-1"></div>
+						<div class="left frm-rdotxt text-wrapping rmarg">Customised</div>
 						<div class="clr"></div>
 					</div>
-					<div class="ccltime">
-						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="3" checked></div>
-						<div class="left frm-rdotxt text-wrapping rmarg">Wednesday</div>
-						<div class="left rmarg"><input type="text" name="from[]" class="frm-txtbox cldate sptime" placeholder="From"></div>
-						<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate sptime" placeholder="Till"></div>
-						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
-						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
-						<div class="clr"></div>
-					</div>
-					<div class="ccltime">
-						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="4" checked></div>
-						<div class="left frm-rdotxt text-wrapping rmarg">Thursday</div>
-						<div class="left rmarg"><input type="text" name="from[]" class="frm-txtbox cldate sptime" placeholder="From"></div>
-						<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate sptime" placeholder="Till"></div>
-						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
-						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
-						<div class="clr"></div>
-					</div>
-					<div class="ccltime">
-						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="5" checked></div>
-						<div class="left frm-rdotxt text-wrapping rmarg">Friday</div>
-						<div class="left rmarg"><input type="text" name="from[]" class="frm-txtbox cldate sptime" placeholder="From"></div>
-						<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate sptime" placeholder="Till"></div>
-						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
-						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
-						<div class="clr"></div>
-					</div>
-					<div class="ccltime">
-						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="6"></div>
-						<div class="left frm-rdotxt text-wrapping rmarg">Saturday</div>
-						<div class="left rmarg"><input type="text" name="from[]" class="frm-txtbox cldate sptime" placeholder="From"></div>
-						<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate spstime" placeholder="Till"></div>
-						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
-						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
-						<div class="clr"></div>
-					</div>
-					<div class="ccltime">
-						<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="7" checked></div>
-						<div class="left frm-rdotxt text-wrapping rmarg">Sunday</div>
-						<div class="left rmarg"><input type="text" name="from[]" class="frm-txtbox cldate sptime" placeholder="From"></div>
-						<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate sptime" placeholder="Till"></div>
-						<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
-						<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
-						<div class="clr"></div>
-					</div>
+					<span id="customised_schedule" class="hide">
+						<div class="ccltime">
+							<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="1" checked></div>
+							<div class="left frm-rdotxt text-wrapping rmarg">Monday</div>
+							<div class="left rmarg"><input type="text" name="from[]" id="timepicker" class="frm-txtbox cldate spetime open_time" placeholder="From"></div>
+							<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate sptime close_time" placeholder="Till"></div>
+							<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+							<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+							<div class="frm-rdobtn left"><input type="checkbox" name="same_for_all" id="same_for_all" class="frm.typrdo" value="1"> Same for all</div>
+							<div class="clr"></div>
+						</div>
+						<div class="ccltime">
+							<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="2" checked></div>
+							<div class="left frm-rdotxt text-wrapping rmarg">Tuesday</div>
+							<div class="left rmarg"><input type="text" name="from[]" class="frm-txtbox cldate sptime open_time" placeholder="From"></div>
+							<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate sptime close_time" placeholder="Till"></div>
+							<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+							<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+							<div class="clr"></div>
+						</div>
+						<div class="ccltime">
+							<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="3" checked></div>
+							<div class="left frm-rdotxt text-wrapping rmarg">Wednesday</div>
+							<div class="left rmarg"><input type="text" name="from[]" class="frm-txtbox cldate sptime open_time" placeholder="From"></div>
+							<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate sptime close_time" placeholder="Till"></div>
+							<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+							<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+							<div class="clr"></div>
+						</div>
+						<div class="ccltime">
+							<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="4" checked></div>
+							<div class="left frm-rdotxt text-wrapping rmarg">Thursday</div>
+							<div class="left rmarg"><input type="text" name="from[]" class="frm-txtbox cldate sptime open_time" placeholder="From"></div>
+							<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate sptime close_time" placeholder="Till"></div>
+							<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+							<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+							<div class="clr"></div>
+						</div>
+						<div class="ccltime">
+							<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="5" checked></div>
+							<div class="left frm-rdotxt text-wrapping rmarg">Friday</div>
+							<div class="left rmarg"><input type="text" name="from[]" class="frm-txtbox cldate sptime open_time" placeholder="From"></div>
+							<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate sptime close_time" placeholder="Till"></div>
+							<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+							<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+							<div class="clr"></div>
+						</div>
+						<div class="ccltime">
+							<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="6"></div>
+							<div class="left frm-rdotxt text-wrapping rmarg">Saturday</div>
+							<div class="left rmarg"><input type="text" name="from[]" class="frm-txtbox cldate sptime open_time" placeholder="From"></div>
+							<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate spstime close_time" placeholder="Till"></div>
+							<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+							<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+							<div class="clr"></div>
+						</div>
+						<div class="ccltime">
+							<div class="frm-rdobtn left"><input type="checkbox" name="day[]" class="frm.typrdo" value="7" checked></div>
+							<div class="left frm-rdotxt text-wrapping rmarg">Sunday</div>
+							<div class="left rmarg"><input type="text" name="from[]" class="frm-txtbox cldate sptime open_time" placeholder="From"></div>
+							<div class="left" style="margin-right: 50px;"><input type="text" name="till[]" class="frm-txtbox cldate sptime close_time" placeholder="Till"></div>
+							<!-- <div class="left rmarg"><input type="time" class="frm-txtbox cldate" placeholder="From"></div>
+							<div class="left"><input type="time" class="frm-txtbox cldate" placeholder="Till"></div> -->
+							<div class="clr"></div>
+						</div>
+					</span>
 				</span>
 				<div class="clr"></div>
 				<div class="frm-er-msg"></div>
