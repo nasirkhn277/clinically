@@ -36,7 +36,10 @@ $(function (e) {
         $(this).datepicker({changeMonth: !0, showAnim: "slideDown", changeYear: !0, dateFormat: "dd-mm-yy", maxDate: e}).datepicker("show");
     });
     $("body").on("focus", ".sptime", function () {
-        $(this).timepicker({timeFormat: "h:i A", minTime: "6:00 AM", maxTime: "10:00 PM"}).timepicker("show");
+        $(this).timepicker({timeFormat: "h:i A", minTime: "12:00 AM", maxTime: "12:00 AM"}).datepicker("show");
+    });
+    $("body").on("focus", ".spctime", function () {
+        $(this).timepicker({timeFormat: "h:i A", minTime: "6:00 AM", maxTime: "10:00 PM"}).datepicker("show");
     });
     $("body").on("focus", ".spstime", function () {
         $(this).timepicker({timeFormat: "h:i A", minTime: "0:00 AM", maxTime: "11:59 PM"}).timepicker("show");

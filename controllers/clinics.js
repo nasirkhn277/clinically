@@ -29,6 +29,10 @@ exports.addClinic = function(req, res, next) {
     res.render('addclinic');
 }
 
+exports.editClinic = function(req, res, next) {
+    res.render('editclinic');
+}
+
 exports.addClinicDetails = function(req, res, next) {
     const req_body = req.body;
     if (req_body) {

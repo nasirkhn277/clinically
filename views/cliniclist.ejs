@@ -39,10 +39,10 @@
 					<div class="left tbl-cell size-m text-wrapping"><%= result.Code ? result.Code : '--'; %></div>
 					<div class="left tbl-cell size-s text-wrapping <%= result.Active == '1' ? 'grntxt' : 'redtxt'; %>"><%= result.Active == '1' ? 'Active' : 'Deactive'; %></div>
 					<div class="right tbl-actn posrel">
-						<a href="#"><img src="img/more-vertical-dark.svg" alt="" height="18px"></a>
-						<span class="drop-actns posabsolut hide">
-							<a href="#" class="text-wrapping">View Details</a>
-							<a href="#" class="text-wrapping">Edit</a>
+						<a class="showAction"><img src="img/more-vertical-dark.svg" alt="" height="18px"></a>
+						<span class="drop-actns posabsolut" style="display:none;">
+							<a href="clinics/viewclinic" class="text-wrapping">View Details</a>
+							<a href="clinics/editclinic/<%= result.ID; %>" class="text-wrapping">Edit</a>
 							<a href="#" class="text-wrapping">Copy Password</a>
 							<a href="#" class="text-wrapping">Deactive</a>
 						</span>
@@ -59,7 +59,7 @@
 					<div class="left tbl-cell size-m text-wrapping">••••••••</div>
 					<div class="left tbl-cell size-s text-wrapping redtxt">Deactive</div>
 					<div class="right tbl-actn posrel">
-						<a href="#"><img src="img/more-vertical-dark.svg" alt="" height="18px"></a>
+						<a ><img src="img/more-vertical-dark.svg" alt="" height="18px"></a>
 						<span class="drop-actns posabsolut">
 							<a href="#" class="text-wrapping">View Details</a>
 							<a href="#" class="text-wrapping">Edit</a>

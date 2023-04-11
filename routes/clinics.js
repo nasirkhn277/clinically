@@ -9,4 +9,6 @@ router.get('/addclinic', clinicsController.addClinic);
 
 router.post('/addclinic', clinicsController.addClinicDetails);
 
+router.get('/editclinic/:id', clinicsController.editClinic);
+
 module.exports = router;
